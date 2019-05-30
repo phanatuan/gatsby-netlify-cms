@@ -2,8 +2,11 @@ backend:
   name: git-gateway
   branch: master
 
+site_url: https://boring-hodgkin-2273e4.netlify.com/
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
+
 
 collections:
   - name: "blog"
@@ -18,3 +21,21 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  
+  - name: "product"
+    label: "Products"
+    label_singular: "product"
+    description: > 
+      This is to generate the info detail for the product you have
+    folder: "content/product"
+    slug: "{{slug}}"
+    summary: "{{title}} - {{price}}"
+    create: true
+    fields: 
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Product Image", name: "product_image", widget: "image", }
+      - { label: "Product Price", name: "product_price", widget: "number", valueType: "int", min: 0 }
+
+  
