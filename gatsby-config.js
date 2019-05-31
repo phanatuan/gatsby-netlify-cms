@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Dong Trung Ha Thao`,
+    author: `Phan Anh Tuan`,
+    description: `Ecommerce site with Product Selection`,
+    siteUrl: `https://dtht.netlify.com/`,
     social: {
       twitter: `kylemathews`,
     },
@@ -22,6 +22,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/product`,
+        name: `product`,
       },
     },
     {
